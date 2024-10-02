@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <style>
+        /* Centraliza o texto grande */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo do texto grande "oioi" */
+        h1 {
+            font-size: 80px;
+            margin: 0;
+        }
+
+        /* Estilo do texto que se move */
+        .movendo {
+            font-size: 20px;
+            color: gray;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+        }
+
+        /* Animação do texto se movendo da direita para a esquerda */
+        .movendo span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: mover 10s linear infinite;
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>oioi</h1>
+    <div class="movendo">
+        <span>Esse é meu site!</span>
+    </div>
+</body>
+</html>
