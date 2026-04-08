@@ -1,147 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LUCAS CORDEIRO</title>
+  <meta charset="UTF-8">
+  <title>Meu Site</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      background: #000;
-      color: #fff;
-      font-family: "Courier New", Courier, monospace;
-      min-height: 100vh;
-      padding: 48px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1050px;
-      border: 1px solid #fff;
-      padding: 38px 40px;
-      background: #000;
-      box-shadow: 0 0 24px rgba(255, 255, 255, 0.05);
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 4.8rem);
-      line-height: 1;
-      margin-bottom: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.18);
-    }
-
-    .subtitle {
-      color: #f0f0f0;
-      margin-bottom: 34px;
-      font-size: 1rem;
-    }
-
-    .blink {
-      display: inline-block;
-      animation: blink 1s steps(1, end) infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    .section {
-      margin-top: 28px;
-      padding-top: 22px;
-      border-top: 1px dashed #fff;
-    }
-
-    .label {
-      display: block;
-      margin-bottom: 18px;
-      font-size: 1rem;
-      color: #fff;
-    }
-
-    .prompt::before {
-      content: "> ";
-    }
-
-    .about {
-      white-space: pre-line;
-      line-height: 1.9;
-      color: #f7f7f7;
-      font-size: 1rem;
-      max-width: 980px;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-top: 4px;
-    }
-
-    a {
-      color: #fff;
-      text-decoration: none;
-      width: fit-content;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s ease, opacity 0.15s ease;
-      font-size: 1rem;
-    }
-
-    a:hover {
-      border-color: #fff;
-      opacity: 0.85;
-    }
-
-    @media (max-width: 700px) {
-      body {
-        padding: 20px 12px;
-      }
-
-      .container {
-        padding: 24px 20px;
-      }
-
-      h1 {
-        letter-spacing: 0.08em;
-      }
-
-      .about {
-        line-height: 1.75;
-      }
+      margin: 0;
+      height: 100vh;
+      background-image: url("colina.jpg");
+      background-size: cover;       
+      background-position: center;  
+      background-repeat: no-repeat; 
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <header>
-      <h1>LUCAS CORDEIRO</h1>
-      <p class="subtitle">personal page <span class="blink">_</span></p>
-    </header>
 
-    <section class="section">
-      <span class="label prompt">about.txt</span>
-      <p class="about">Hello, I’m Lucas, a 21-year-old Applied Mathematics major at the University of São Paulo. My main interests include topology, cryptography, linguistics, Middle Eastern history, and 3D modeling. I’m drawn to areas that mix abstraction, pattern, and creation, whether through mathematics, language, computation, or visual design. This site is a small space for my projects, interests, and other things I find worth sharing.</p>
-    </section>
-
-    <section class="section">
-      <span class="label prompt">links/</span>
-      <div class="links">
-        <a href="https://twitter.com/IoStracciatella" target="_blank" rel="noopener noreferrer">twitter</a>
-        <a href="https://steamcommunity.com/profiles/76561199166174874/" target="_blank" rel="noopener noreferrer">steam</a>
-        <a href="https://www.youtube.com/watch?v=YQ404vwjzus" target="_blank" rel="noopener noreferrer">???</a>
-      </div>
-    </section>
-  </main>
 </body>
 </html>
