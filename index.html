@@ -76,26 +76,40 @@
       cursor: pointer;
       padding: 0;
     }
+
+    .conteudo-menu {
+      position: absolute;
+      top: 12%;
+      left: 4.5%;
+      width: 90%;
+      height: 80%;
+      box-sizing: border-box;
+      padding: 18px;
+      overflow-y: auto;
+      color: black;
+      font-size: 22px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
 
-  <div class="icone-app" style="top: 20px;" onclick="abrirMenu()">
+  <div class="icone-app" style="top: 20px;" onclick="abrirMenu('sobre')">
     <img src="icone.png">
     <span>Sobre Mim</span>
   </div>
 
-  <div class="icone-app" style="top: 130px;" onclick="abrirMenu()">
+  <div class="icone-app" style="top: 130px;" onclick="abrirMenu('interesses')">
     <img src="icone1.png">
     <span>Meus Interesses</span>
   </div>
 
-  <div class="icone-app" style="top: 240px;" onclick="abrirMenu()">
+  <div class="icone-app" style="top: 240px;" onclick="abrirMenu('projetos')">
     <img src="icone2.png">
     <span>Meus Projetos</span>
   </div>
 
-  <div class="icone-app" style="top: 350px;" onclick="abrirMenu()">
+  <div class="icone-app" style="top: 350px;" onclick="abrirMenu('links')">
     <img src="icone3.png">
     <span>Links</span>
   </div>
@@ -103,6 +117,7 @@
   <div class="menu" id="menu">
     <div class="janela">
       <img src="menu.png">
+      <div class="conteudo-menu" id="conteudo-menu"></div>
       <button class="area-fechar" onclick="fecharMenu()"></button>
     </div>
   </div>
@@ -122,7 +137,18 @@
     const random = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = `url(${backgrounds[random]})`;
 
-    function abrirMenu() {
+    const textos = {
+      sobre: `Olá. Eu sou Lucas. Um estudante de matemática aplicada e computação científica na USP. Meu interesse por computação vem desde pequeno, quando eu aprendi a mexer no scratch. Além de computação, me interesso também por modelagem 3D, linguística, desenho, história do oriente médio e criptografia. Fiz esse site pra mostrar meu portfolio e outras coisas que eu achar interessantes! :)`,
+
+      interesses: `Aqui você pode colocar um texto sobre seus interesses.`,
+
+      projetos: `Aqui você pode colocar um texto sobre seus projetos.`,
+
+      links: `Aqui você pode colocar links importantes, redes sociais e outras páginas.`
+    };
+
+    function abrirMenu(tipo) {
+      document.getElementById("conteudo-menu").textContent = textos[tipo];
       document.getElementById("menu").classList.add("aberto");
     }
 
