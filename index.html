@@ -93,6 +93,18 @@
       text-decoration: underline;
     }
 
+    .secao {
+      margin-bottom: 25px;
+    }
+
+    .titulo-secao {
+      font-size: 20px;
+      margin-bottom: 8px;
+      border-bottom: 2px solid black;
+      display: inline-block;
+      padding-bottom: 2px;
+    }
+
     .inicio {
       display: flex;
       flex-direction: column;
@@ -180,25 +192,32 @@
 
   <script>
     const backgrounds = [
-      "colina.jpg",
-      "montanha.jpg",
-      "campo.jpg",
-      "nuvens.jpg",
-      "por_do_sol.jpg",
-      "frutiger.jpg",
-      "mar.jpg",
-      "neve.jpg"
+      "colina.jpg","montanha.jpg","campo.jpg","nuvens.jpg",
+      "por_do_sol.jpg","frutiger.jpg","mar.jpg","neve.jpg"
     ];
 
     const random = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = `url(${backgrounds[random]})`;
 
     const textos = {
-      sobre: `Olá. Eu sou Lucas. Um estudante de matemática aplicada e computação científica na USP. Meu interesse por computação vem desde pequeno, quando eu aprendi a mexer no scratch. Além de computação, me interesso também por modelagem 3D, linguística, desenho, história do oriente médio e criptografia. Fiz esse site pra mostrar meu portfolio e outras coisas que eu achar interessantes! :)`,
+      sobre: `Olá. Eu sou Lucas...`,
 
-      interesses: `Topologia<br>Criptografia<br>Modelagem 3D<br>História do Oriente médio<br>Linguística e Semântica Formal`,
+      interesses: `
+        <div class="secao">
+          <div class="titulo-secao">Relacionado a matemática/computação</div><br>
+          Topologia<br>
+          Criptografia<br>
+          Modelagem 3D
+        </div>
 
-      projetos: `Estou trabalhando em um jogo eletrônico educacional para o CDCC USP, feito na engine do Roblox. O projeto está sendo feito em conjunto com meu amigo.`,
+        <div class="secao">
+          <div class="titulo-secao">Gerais</div><br>
+          História do Oriente médio<br>
+          Linguística e Semântica Formal
+        </div>
+      `,
+
+      projetos: `Estou trabalhando...`,
 
       links: `
         Minhas redes sociais<br><br>
