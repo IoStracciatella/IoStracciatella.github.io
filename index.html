@@ -12,7 +12,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
+      font-family: Helvetica, Arial, sans-serif;
       position: relative;
     }
 
@@ -85,7 +85,11 @@
       color: black;
       font-size: 22px;
       line-height: 1.5;
-      white-space: pre-line;
+    }
+
+    .conteudo-menu a {
+      color: blue;
+      text-decoration: underline;
     }
 
     .inicio {
@@ -126,12 +130,8 @@
     .titulo-animado span:nth-child(14) { animation-delay: 1.04s; }
 
     @keyframes ondular {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .subtitulo {
@@ -170,7 +170,7 @@
           <div class="titulo-animado">
             <span>L</span><span>U</span><span>C</span><span>A</span><span>S</span><span>&nbsp;</span><span>C</span><span>O</span><span>R</span><span>D</span><span>E</span><span>I</span><span>R</span><span>O</span>
           </div>
-          <div class="subtitulo">site pessoal</div>
+          <div class="subtitulo">Bem vindo ao meu site pessoal! :D</div>
         </div>
       </div>
       <button class="area-fechar" onclick="fecharMenu()"></button>
@@ -194,19 +194,20 @@
 
     const textos = {
       sobre: `Olá. Eu sou Lucas. Um estudante de matemática aplicada e computação científica na USP. Meu interesse por computação vem desde pequeno, quando eu aprendi a mexer no scratch. Além de computação, me interesso também por modelagem 3D, linguística, desenho, história do oriente médio e criptografia. Fiz esse site pra mostrar meu portfolio e outras coisas que eu achar interessantes! :)`,
-      interesses: `Topologia
-Criptografia
-Modelagem 3D
-História do Oriente médio
-Linguística e Semântica Formal`,
+
+      interesses: `Topologia<br>Criptografia<br>Modelagem 3D<br>História do Oriente médio<br>Linguística e Semântica Formal`,
+
       projetos: `Estou trabalhando em um jogo eletrônico educacional para o CDCC USP, feito na engine do Roblox. O projeto está sendo feito em conjunto com meu amigo.`,
-      links: `Github: @iostracciatella
-LinkedIn: Lucas Cordeiro
-.`
+
+      links: `
+        <a href="https://github.com/IoStracciatella/" target="_blank">Github</a><br>
+        <a href="https://www.linkedin.com/in/lucas-cordeiro-21b6a22b6/" target="_blank">LinkedIn</a><br>
+        <a href="https://x.com/IoStracciatella" target="_blank">Twitter</a>
+      `
     };
 
     function abrirMenu(tipo) {
-      document.getElementById("conteudo-menu").textContent = textos[tipo];
+      document.getElementById("conteudo-menu").innerHTML = textos[tipo];
       document.getElementById("menu").style.display = "block";
     }
 
