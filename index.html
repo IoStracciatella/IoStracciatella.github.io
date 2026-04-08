@@ -49,7 +49,16 @@
       display: none;
     }
 
-    .menu img {
+    .menu.aberto {
+      display: block;
+    }
+
+    .janela {
+      position: relative;
+      display: inline-block;
+    }
+
+    .janela img {
       width: auto;
       height: auto;
       max-width: 85vw;
@@ -57,20 +66,31 @@
       display: block;
     }
 
-    .menu.aberto {
-      display: block;
+    .area-fechar {
+      position: absolute;
+      top: 1.4%;
+      right: 1.1%;
+      width: 13%;
+      height: 5.5%;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="icone-app" onclick="alternarMenu()">
+  <div class="icone-app" onclick="abrirMenu()">
     <img src="icone.png">
     <span>Sobre Mim</span>
   </div>
 
   <div class="menu" id="menu">
-    <img src="menu.png">
+    <div class="janela">
+      <img src="menu.png">
+      <button class="area-fechar" onclick="fecharMenu()"></button>
+    </div>
   </div>
 
   <script>
@@ -88,9 +108,12 @@
     const random = Math.floor(Math.random() * backgrounds.length);
     document.body.style.backgroundImage = `url(${backgrounds[random]})`;
 
-    function alternarMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("aberto");
+    function abrirMenu() {
+      document.getElementById("menu").classList.add("aberto");
+    }
+
+    function fecharMenu() {
+      document.getElementById("menu").classList.remove("aberto");
     }
   </script>
 
