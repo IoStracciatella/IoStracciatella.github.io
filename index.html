@@ -18,7 +18,6 @@
 
     .icone-app {
       position: absolute;
-      top: 20px;
       left: 20px;
       width: 130px;
       text-align: center;
@@ -81,9 +80,24 @@
 </head>
 <body>
 
-  <div class="icone-app" onclick="abrirMenu()">
+  <div class="icone-app" style="top: 20px;" onclick="abrirMenu()">
     <img src="icone.png">
     <span>Sobre Mim</span>
+  </div>
+
+  <div class="icone-app" style="top: 130px;" onclick="abrirMenu()">
+    <img src="icone1.png">
+    <span>App 1</span>
+  </div>
+
+  <div class="icone-app" style="top: 240px;" onclick="abrirMenu()">
+    <img src="icone2.png">
+    <span>App 2</span>
+  </div>
+
+  <div class="icone-app" style="top: 350px;" onclick="abrirMenu()">
+    <img src="icone3.png">
+    <span>App 3</span>
   </div>
 
   <div class="menu" id="menu">
