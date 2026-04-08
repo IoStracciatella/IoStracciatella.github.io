@@ -9,7 +9,6 @@
       margin: 0;
       height: 100vh;
       overflow: hidden;
-      background-image: url("colina.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -75,6 +74,20 @@
   </div>
 
   <script>
+    const backgrounds = [
+      "colina.jpg",
+      "montanha.jpg",
+      "campo.jpg",
+      "nuvens.jpg",
+      "por_do_sol.jpg",
+      "frutiger.jpg",
+      "mar.jpg",
+      "neve.jpg"
+    ];
+
+    const random = Math.floor(Math.random() * backgrounds.length);
+    document.body.style.backgroundImage = `url(${backgrounds[random]})`;
+
     function alternarMenu() {
       const menu = document.getElementById("menu");
       menu.classList.toggle("aberto");
