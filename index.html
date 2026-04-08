@@ -21,15 +21,15 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 110px;
+      width: 130px;
       text-align: center;
       cursor: pointer;
       user-select: none;
     }
 
     .icone-app img {
-      width: 64px;
-      height: 64px;
+      width: 80px;
+      height: 80px;
       object-fit: contain;
       display: block;
       margin: 0 auto 6px auto;
@@ -44,15 +44,17 @@
 
     .menu {
       position: absolute;
-      top: 100px;
-      left: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: none;
     }
 
     .menu img {
-      width: 300px;
-      max-width: 90vw;
+      width: 80vw;
+      max-width: 1200px;
       height: auto;
+      max-height: 85vh;
       display: block;
     }
 
@@ -65,7 +67,7 @@
 
   <div class="icone-app" onclick="alternarMenu()">
     <img src="icone.png">
-    <span>Meu App</span>
+    <span>Sobre Mim</span>
   </div>
 
   <div class="menu" id="menu">
